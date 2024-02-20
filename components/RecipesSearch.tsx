@@ -2,16 +2,14 @@ import { RecipesContext } from "@/context/recipes_context";
 import React, { useContext, useRef } from "react";
 
 function RecipesSearch({
-  setRecipesList,
   setSearchInput,
   setLoading,
 }: {
-  setRecipesList: React.Dispatch<React.SetStateAction<any>>;
   setSearchInput: React.Dispatch<React.SetStateAction<string>>;
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const inputRef = useRef<RefObject<HTMLInputElement>>();
-  // const { recipes, setRecipesList } = useContext(RecipesContext);
+  const { setRecipesList } = useContext(RecipesContext);
 
   const fetchRecipes = async (searchValue: String) => {
     setLoading(true);

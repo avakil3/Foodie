@@ -1,7 +1,14 @@
 "use client";
-import { createContext, useState } from "react";
+import { Dispatch, SetStateAction, createContext, useState } from "react";
 
-export const RecipesContext = createContext([]);
+type State = {
+  recipes: any[];
+  setRecipesList?: Dispatch<SetStateAction<never[]>>;
+};
+
+export const RecipesContext = createContext<State>({
+  recipes: [],
+});
 
 export function Context({ children }: { children: React.ReactNode }) {
   const [recipes, setRecipesList] = useState([]);
