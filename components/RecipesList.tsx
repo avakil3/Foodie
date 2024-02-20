@@ -14,7 +14,6 @@ function RecipesList({
   //   RecipesContext
   // );
 
-  console.log(recipes);
   return (
     <>
       {searchInput && (

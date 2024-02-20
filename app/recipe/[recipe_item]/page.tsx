@@ -4,7 +4,6 @@ import { PiBowlFood } from "react-icons/pi";
 import { RecipesContext } from "@/context/recipes_context";
 
 export default function Home() {
-  console.log(recipe);
   return (
     <div className="recipeContainer">
       <h1>{recipe.label}</h1>
