@@ -13,8 +13,6 @@ export default function Home() {
     recipe = recipes.find(
       (recipe) => recipe.recipe.label === recipe_title
     ).recipe;
-
-    console.log(recipe);
   }
   return recipe ? (
     <div className="recipeContainer">
